@@ -306,7 +306,7 @@ class BaseContainer(Container, ABC):
     @staticmethod
     def _map_merge(dest: "BaseContainer", src: "BaseContainer") -> None:
         """merge src into dest and return a new copy, does not modified input"""
-        from omegaconf import AnyNode, DictConfig, ValueNode
+        from omegaconf import AnyNode, DictConfig, ListConfig, ValueNode
 
         assert isinstance(dest, DictConfig)
         assert isinstance(src, DictConfig)
